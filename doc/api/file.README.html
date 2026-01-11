@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; SinaDB Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-SinaDB+-+Web-Based+Guestbook+Application">SinaDB - Web-Based Guestbook Application</h1>
+
+<p>A simple, elegant web-based guestbook application built with Sinatra and SQLite. This project demonstrates modern web development practices including input validation, security, and clean code organization.</p>
+
+<h2 id="label-Features">Features</h2>
+<ul><li>
+<p><strong>Sign the Guestbook:</strong> Visitors can enter their name, email (optional), and message</p>
+</li><li>
+<p><strong>View Entries:</strong> All guestbook entries are displayed in reverse chronological order (newest first)</p>
+</li><li>
+<p><strong>Data Persistence:</strong> All entries are stored in a SQLite database</p>
+</li><li>
+<p><strong>Input Validation:</strong> Server-side validation ensures data integrity</p>
+</li><li>
+<p><strong>XSS Protection:</strong> User input is HTML-escaped before display</p>
+</li><li>
+<p><strong>SQL Injection Prevention:</strong> Parameterized database queries</p>
+</li><li>
+<p><strong>Health Check:</strong> Built-in monitoring endpoint for deployment pipelines</p>
+</li><li>
+<p><strong>Responsive Design:</strong> Clean, modern UI that works on all device sizes</p>
+</li></ul>
+
+<h2 id="label-Requirements">Requirements</h2>
+<ul><li>
+<p>Ruby 3.2.8 or higher</p>
+</li><li>
+<p>SQLite3</p>
+</li><li>
+<p>Bundler</p>
+</li></ul>
+
+<h2 id="label-Installation">Installation</h2>
+<ol><li>
+<p><strong>Clone the repository</strong>  <code>bash    git clone https://github.com/yourusername/SinaDB.git    cd SinaDB </code></p>
+</li><li>
+<p><strong>Install Ruby version</strong>  <code>bash    rbenv install 3.2.8    rbenv local 3.2.8 </code></p>
+</li><li>
+<p><strong>Install gems</strong>  <code>bash    bundle install </code></p>
+</li><li>
+<p><strong>Initialize the database</strong>  <code>bash    ruby db/migrate.rb </code></p>
+</li><li>
+<p><strong>Add sample data (optional)</strong>  <code>bash    ruby add_sample_records.rb </code></p>
+</li></ol>
+
+<h2 id="label-Running+the+Application">Running the Application</h2>
+
+<p>Start the development server:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_ruby'>ruby</span> <span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_rb'>rb</span>
+</code></pre>
+
+<p>The application will start on <code>http://localhost:4567</code></p>
+
+<p>For automatic server reload on code changes, use:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_rerun'>rerun</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ruby app.rb</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<h2 id="label-Project+Structure">Project Structure</h2>
+
+<pre class="code ruby"><code class="ruby">SinaDB/
+├── README.md                  # This file
+├── api.md                     # API documentation
+├── app.rb                     # Main Sinatra application
+├── config.ru                  # Rack configuration
+├── Gemfile                    # Ruby gem dependencies
+├── .rubocop.yml              # Code style configuration
+│
+├── config/
+│   └── database.rb           # Database configuration and connection
+│
+├── db/
+│   ├── migrate.rb            # Database schema setup
+│   └── sina.db               # SQLite database (created after migration)
+│
+├── lib/
+│   └── guestbook.rb          # GuestbookManager class (data access layer)
+│
+├── public/
+│   └── style.css             # Styling for the application
+│
+├── views/
+│   ├── index.erb             # Main guestbook page template
+│   └── layout.erb            # Base HTML layout template
+│
+└── test/
+    ├── test_guestbook.rb     # Unit tests for GuestbookManager
+    └── test_submission.rb    # Integration tests for form submission
+</code></pre>
+
+<h2 id="label-Database">Database</h2>
+
+<p>The application uses SQLite for data storage. The database schema includes a single table:</p>
+
+<pre class="code ruby"><code class="ruby">CREATE TABLE guestbook_entries (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  visitor_name TEXT NOT NULL,
+  email TEXT,
+  message TEXT NOT NULL,
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  updated_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+</code></pre>
+
+<h3 id="label-Database+Initialization">Database Initialization</h3>
+
+<p>To set up the database schema:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_ruby'>ruby</span> <span class='id identifier rubyid_db'>db</span><span class='op'>/</span><span class='id identifier rubyid_migrate'>migrate</span><span class='period'>.</span><span class='id identifier rubyid_rb'>rb</span>
+</code></pre>
+
+<p>This will create the SQLite database file at <code>db/sina.db</code> with the necessary table structure.</p>
+
+<h2 id="label-API+Endpoints">API Endpoints</h2>
+
+<h3 id="label-GET+-2F">GET /</h3>
+
+<p>Main page displaying all guestbook entries and the submission form.</p>
+
+<h3 id="label-POST+-2Fentries">POST /entries</h3>
+
+<p>Creates a new guestbook entry with validation.</p>
+
+<p><strong>Parameters:</strong> - <code>visitor_name</code> (required): Name of the visitor - <code>email</code> (optional): Email address - <code>message</code> (required): The message content</p>
+
+<h3 id="label-GET+-2Fhealth">GET /health</h3>
+
+<p>Health check endpoint returning JSON with application status.</p>
+
+<p>See <a href="api_md.html">api.md</a> for detailed API documentation.</p>
+
+<h2 id="label-Code+Quality">Code Quality</h2>
+
+<p>This project uses RuboCop for code quality enforcement. All code passes RuboCop checks with no offenses detected.</p>
+
+<h3 id="label-Running+RuboCop">Running RuboCop</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_rubocop'>rubocop</span>
+</code></pre>
+
+<p>Auto-correct fixable offenses:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_rubocop'>rubocop</span> <span class='op'>-</span><span class='id identifier rubyid_a'>a</span>
+</code></pre>
+
+<h2 id="label-Testing">Testing</h2>
+
+<p>Run the test suite:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_ruby'>ruby</span> <span class='id identifier rubyid_test'>test</span><span class='op'>/</span><span class='id identifier rubyid_test_guestbook'>test_guestbook</span><span class='period'>.</span><span class='id identifier rubyid_rb'>rb</span>
+<span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_ruby'>ruby</span> <span class='id identifier rubyid_test'>test</span><span class='op'>/</span><span class='id identifier rubyid_test_submission'>test_submission</span><span class='period'>.</span><span class='id identifier rubyid_rb'>rb</span>
+</code></pre>
+
+<h2 id="label-Development">Development</h2>
+
+<h3 id="label-Adding+New+Features">Adding New Features</h3>
+<ol><li>
+<p>Follow the existing code structure and patterns</p>
+</li><li>
+<p>Add comprehensive documentation using YARD format</p>
+</li><li>
+<p>Ensure code passes RuboCop checks</p>
+</li><li>
+<p>Write tests for new functionality</p>
+</li><li>
+<p>Update API documentation if endpoints are added</p>
+</li></ol>
+
+<h3 id="label-Code+Documentation">Code Documentation</h3>
+
+<p>This project uses YARD-style comments for code documentation. Key classes and methods include:</p>
+<ul><li>
+<p><strong>GuestbookApp:</strong> Main Sinatra application class</p>
+</li><li>
+<p><strong>GuestbookManager:</strong> Database operations and data access layer</p>
+</li><li>
+<p><strong>Database:</strong> Database connection management</p>
+</li></ul>
+
+<p>To view inline documentation:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_yard'>yard</span> <span class='id identifier rubyid_doc'>doc</span>
+</code></pre>
+
+<h2 id="label-Deployment">Deployment</h2>
+
+<h3 id="label-Environment+Setup">Environment Setup</h3>
+
+<p>The application looks for a SQLite database at <code>db/sina.db</code>. Ensure the <code>db</code> directory exists and is writable by the application process.</p>
+
+<h3 id="label-Running+on+Production">Running on Production</h3>
+
+<p>Use a production-grade server like Puma:</p>
+
+<pre class="code ruby"><code class="ruby">bundle exec puma -t 8:16 -w 3
+</code></pre>
+
+<h2 id="label-Dependencies">Dependencies</h2>
+
+<p>Core dependencies: - <strong>sinatra</strong> (~&gt; 4.0): Web application framework - <strong>sqlite3</strong> (~&gt; 1.6): SQLite database adapter - <strong>puma</strong> (~&gt; 6.0): Web server</p>
+
+<p>Development dependencies: - <strong>rerun</strong> (~&gt; 0.14): Auto-reload on file changes - <strong>rubocop</strong> (~&gt; 1.57): Code quality checker</p>
+
+<h2 id="label-Security+Considerations">Security Considerations</h2>
+
+<p>This application implements several security best practices:</p>
+<ul><li>
+<p><strong>Input Validation:</strong> All user input is validated server-side</p>
+</li><li>
+<p><strong>XSS Prevention:</strong> User-generated content is HTML-escaped before display</p>
+</li><li>
+<p><strong>SQL Injection Prevention:</strong> All SQL queries use parameterized values</p>
+</li><li>
+<p><strong>Session Support:</strong> Includes session management for flash messages</p>
+</li></ul>
+
+<p>For production deployment, consider adding: - User authentication - Rate limiting - HTTPS enforced - Content Security Policy headers - CSRF protection</p>
+
+<h2 id="label-Contributing">Contributing</h2>
+
+<p>Contributions are welcome! Please ensure: 1. Code follows RuboCop guidelines 2. All tests pass 3. Documentation is included for new features 4. Commit messages are clear and descriptive</p>
+
+<h2 id="label-License">License</h2>
+
+<p>This project is open source and available under the MIT License.</p>
+
+<h2 id="label-Support">Support</h2>
+
+<p>For questions or issues, please open a GitHub issue or contact the development team.</p>
+
+<h2 id="label-Changelog">Changelog</h2>
+
+<h3 id="label-Version+1.0.0">Version 1.0.0</h3>
+<ul><li>
+<p>Initial release</p>
+</li><li>
+<p>Guestbook entry creation and viewing</p>
+</li><li>
+<p>Input validation and security features</p>
+</li><li>
+<p>Health check endpoint</p>
+</li><li>
+<p>Comprehensive documentation</p>
+</li></ul>
+</div></div>
+
+      <div id="footer">
+  Generated on Mon Jan 12 05:31:34 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.38 (ruby-3.2.8).
+</div>
+
+    </div>
+  </body>
+</html>

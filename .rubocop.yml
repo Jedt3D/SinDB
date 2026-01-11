@@ -1,0 +1,30 @@
+# RuboCop configuration for SinaDB project
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/**/*'
+    - 'config/initializers/**/*'
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringConcatenation:
+  Enabled: false
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 25
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Metrics/ClassLength:
+  CountComments: false
+  Max: 150

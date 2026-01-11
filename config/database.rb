@@ -2,10 +2,10 @@
 
 # Database configuration and connection handling
 class Database
-  require 'sqlite3'
+  require "sqlite3"
 
   # Path where the database file will be stored
-  DB_PATH = File.join(__dir__, '..', 'db', 'sina.db').freeze
+  DB_PATH = File.join(__dir__, "..", "db", "sina.db").freeze
 
   def self.connect
     @db ||= SQLite3::Database.new(DB_PATH)
@@ -29,7 +29,7 @@ class Database
   def self.setup_database
     # Create db directory if it doesn't exist
     db_dir = File.dirname(DB_PATH)
-    Dir.mkdir(db_dir) unless Dir.exist?(db_dir)
+    FileUtils.mkdir_p(db_dir)
 
     # Connect to create the file if it doesn't exist
     connection

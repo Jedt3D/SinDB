@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TestGuestbookManager
+  
+    &mdash; SinaDB Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "TestGuestbookManager";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (T)</a> &raquo;
+    
+    
+    <span class="title">TestGuestbookManager</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TestGuestbookManager
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Minitest::Test</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Minitest::Test</li>
+          
+            <li class="next">TestGuestbookManager</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>test/test_guestbook.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Test suite for GuestbookManager</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup-instance_method" title="#setup (instance method)">#<strong>setup</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_all_entries_ordered_newest_first-instance_method" title="#test_all_entries_ordered_newest_first (instance method)">#<strong>test_all_entries_ordered_newest_first</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_create_entry_failure_empty_message-instance_method" title="#test_create_entry_failure_empty_message (instance method)">#<strong>test_create_entry_failure_empty_message</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_create_entry_failure_empty_name-instance_method" title="#test_create_entry_failure_empty_name (instance method)">#<strong>test_create_entry_failure_empty_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_create_entry_success-instance_method" title="#test_create_entry_success (instance method)">#<strong>test_create_entry_success</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_invalid_email_format-instance_method" title="#test_invalid_email_format (instance method)">#<strong>test_invalid_email_format</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_invalid_email_formats-instance_method" title="#test_invalid_email_formats (instance method)">#<strong>test_invalid_email_formats</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_invalid_entry_empty_message-instance_method" title="#test_invalid_entry_empty_message (instance method)">#<strong>test_invalid_entry_empty_message</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_invalid_entry_empty_name-instance_method" title="#test_invalid_entry_empty_name (instance method)">#<strong>test_invalid_entry_empty_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_invalid_entry_nil_message-instance_method" title="#test_invalid_entry_nil_message (instance method)">#<strong>test_invalid_entry_nil_message</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_valid_email_formats-instance_method" title="#test_valid_email_formats (instance method)">#<strong>test_valid_email_formats</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_valid_entry_with_all_fields-instance_method" title="#test_valid_entry_with_all_fields (instance method)">#<strong>test_valid_entry_with_all_fields</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_valid_entry_without_email-instance_method" title="#test_valid_entry_without_email (instance method)">#<strong>test_valid_entry_without_email</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="setup-instance_method">
+  
+    #<strong>setup</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span>
+  <span class='comment'># Clean up any test data before each test
+</span>  <span class='const'><span class='object_link'><a href="Database.html" title="Database (class)">Database</a></span></span><span class='period'>.</span><span class='id identifier rubyid_execute'><span class='object_link'><a href="Database.html#execute-class_method" title="Database.execute (method)">execute</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DELETE FROM guestbook_entries</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_all_entries_ordered_newest_first-instance_method">
+  
+    #<strong>test_all_entries_ordered_newest_first</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_all_entries_ordered_newest_first'>test_all_entries_ordered_newest_first</span>
+  <span class='comment'># Create multiple entries
+</span>  <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="GuestbookManager.html#create-class_method" title="GuestbookManager.create (method)">create</a></span></span><span class='lparen'>(</span>
+    <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>First User</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>First message</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='float'>0.1</span><span class='rparen'>)</span> <span class='comment'># Ensure different timestamps
+</span>
+  <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="GuestbookManager.html#create-class_method" title="GuestbookManager.create (method)">create</a></span></span><span class='lparen'>(</span>
+    <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Second User</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Second message</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_entries'>entries</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'><span class='object_link'><a href="GuestbookManager.html#all-class_method" title="GuestbookManager.all (method)">all</a></span></span>
+
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span> <span class='int'>2</span><span class='comma'>,</span> <span class='id identifier rubyid_entries'>entries</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='comment'># Most recent should be first
+</span>  <span class='id identifier rubyid_assert_equal'>assert_equal</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Second User</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_entries'>entries</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>visitor_name</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>First User</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_entries'>entries</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>visitor_name</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_create_entry_failure_empty_message-instance_method">
+  
+    #<strong>test_create_entry_failure_empty_message</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124
+125
+126
+127
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 122</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_create_entry_failure_empty_message'>test_create_entry_failure_empty_message</span>
+  <span class='id identifier rubyid_assert_raises'>assert_raises</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Message cannot be empty</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="GuestbookManager.html#create-class_method" title="GuestbookManager.create (method)">create</a></span></span><span class='lparen'>(</span>
+      <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test User</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_create_entry_failure_empty_name-instance_method">
+  
+    #<strong>test_create_entry_failure_empty_name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113
+114
+115
+116
+117
+118
+119
+120</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 112</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_create_entry_failure_empty_name'>test_create_entry_failure_empty_name</span>
+  <span class='id identifier rubyid_assert_raises'>assert_raises</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Visitor name cannot be empty</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="GuestbookManager.html#create-class_method" title="GuestbookManager.create (method)">create</a></span></span><span class='lparen'>(</span>
+      <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test message</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_create_entry_success-instance_method">
+  
+    #<strong>test_create_entry_success</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_create_entry_success'>test_create_entry_success</span>
+  <span class='id identifier rubyid_entry_id'>entry_id</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="GuestbookManager.html#create-class_method" title="GuestbookManager.create (method)">create</a></span></span><span class='lparen'>(</span>
+    <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test User</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a test message</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_assert'>assert</span> <span class='id identifier rubyid_entry_id'>entry_id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Should return an entry ID</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='comment'># Verify entry was created
+</span>  <span class='id identifier rubyid_entry'>entry</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'><span class='object_link'><a href="GuestbookManager.html#find-class_method" title="GuestbookManager.find (method)">find</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_entry_id'>entry_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert'>assert</span> <span class='id identifier rubyid_entry'>entry</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Should be able to retrieve the created entry</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test User</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_entry'>entry</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>visitor_name</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_entry'>entry</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a test message</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_entry'>entry</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>message</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_invalid_email_format-instance_method">
+  
+    #<strong>test_invalid_email_format</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_invalid_email_format'>test_invalid_email_format</span>
+  <span class='id identifier rubyid_errors'>errors</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_valid_entry?'><span class='object_link'><a href="GuestbookManager.html#valid_entry%3F-class_method" title="GuestbookManager.valid_entry? (method)">valid_entry?</a></span></span><span class='lparen'>(</span>
+    <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>John Doe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid-email</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test message</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_includes'>assert_includes</span> <span class='id identifier rubyid_errors'>errors</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid email format</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_invalid_email_formats-instance_method">
+  
+    #<strong>test_invalid_email_formats</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_invalid_email_formats'>test_invalid_email_formats</span>
+  <span class='id identifier rubyid_invalid_emails'>invalid_emails</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid@</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user@.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user@example</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_invalid_emails'>invalid_emails</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_email'>email</span><span class='op'>|</span>
+    <span class='id identifier rubyid_refute'>refute</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_valid_email?'><span class='object_link'><a href="GuestbookManager.html#valid_email%3F-class_method" title="GuestbookManager.valid_email? (method)">valid_email?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_email'>email</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_email'>email</span><span class='embexpr_end'>}</span><span class='tstring_content'> should be invalid</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_invalid_entry_empty_message-instance_method">
+  
+    #<strong>test_invalid_entry_empty_message</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_invalid_entry_empty_message'>test_invalid_entry_empty_message</span>
+  <span class='id identifier rubyid_errors'>errors</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_valid_entry?'><span class='object_link'><a href="GuestbookManager.html#valid_entry%3F-class_method" title="GuestbookManager.valid_entry? (method)">valid_entry?</a></span></span><span class='lparen'>(</span>
+    <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>John Doe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>john@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_includes'>assert_includes</span> <span class='id identifier rubyid_errors'>errors</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Message cannot be empty</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_invalid_entry_empty_name-instance_method">
+  
+    #<strong>test_invalid_entry_empty_name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_invalid_entry_empty_name'>test_invalid_entry_empty_name</span>
+  <span class='id identifier rubyid_errors'>errors</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_valid_entry?'><span class='object_link'><a href="GuestbookManager.html#valid_entry%3F-class_method" title="GuestbookManager.valid_entry? (method)">valid_entry?</a></span></span><span class='lparen'>(</span>
+    <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test message</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_includes'>assert_includes</span> <span class='id identifier rubyid_errors'>errors</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Visitor name cannot be empty</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_invalid_entry_nil_message-instance_method">
+  
+    #<strong>test_invalid_entry_nil_message</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_invalid_entry_nil_message'>test_invalid_entry_nil_message</span>
+  <span class='id identifier rubyid_errors'>errors</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_valid_entry?'><span class='object_link'><a href="GuestbookManager.html#valid_entry%3F-class_method" title="GuestbookManager.valid_entry? (method)">valid_entry?</a></span></span><span class='lparen'>(</span>
+    <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>John Doe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>john@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='kw'>nil</span>
+  <span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_includes'>assert_includes</span> <span class='id identifier rubyid_errors'>errors</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Message cannot be empty</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_valid_email_formats-instance_method">
+  
+    #<strong>test_valid_email_formats</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_valid_email_formats'>test_valid_email_formats</span>
+  <span class='id identifier rubyid_valid_emails'>valid_emails</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user.name@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user+tag@example.co.uk</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_name@example-domain.com</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_valid_emails'>valid_emails</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_email'>email</span><span class='op'>|</span>
+    <span class='id identifier rubyid_assert'>assert</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_valid_email?'><span class='object_link'><a href="GuestbookManager.html#valid_email%3F-class_method" title="GuestbookManager.valid_email? (method)">valid_email?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_email'>email</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_email'>email</span><span class='embexpr_end'>}</span><span class='tstring_content'> should be valid</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_valid_entry_with_all_fields-instance_method">
+  
+    #<strong>test_valid_entry_with_all_fields</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_valid_entry_with_all_fields'>test_valid_entry_with_all_fields</span>
+  <span class='id identifier rubyid_errors'>errors</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_valid_entry?'><span class='object_link'><a href="GuestbookManager.html#valid_entry%3F-class_method" title="GuestbookManager.valid_entry? (method)">valid_entry?</a></span></span><span class='lparen'>(</span>
+    <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>John Doe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>john@example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Great guestbook!</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_empty'>assert_empty</span> <span class='id identifier rubyid_errors'>errors</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Should have no validation errors</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_valid_entry_without_email-instance_method">
+  
+    #<strong>test_valid_entry_without_email</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/test_guestbook.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_valid_entry_without_email'>test_valid_entry_without_email</span>
+  <span class='id identifier rubyid_errors'>errors</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GuestbookManager.html" title="GuestbookManager (class)">GuestbookManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_valid_entry?'><span class='object_link'><a href="GuestbookManager.html#valid_entry%3F-class_method" title="GuestbookManager.valid_entry? (method)">valid_entry?</a></span></span><span class='lparen'>(</span>
+    <span class='label'>visitor_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Jane Doe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Love this guestbook!</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_empty'>assert_empty</span> <span class='id identifier rubyid_errors'>errors</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Should have no validation errors when email is empty</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Jan 12 05:31:34 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.38 (ruby-3.2.8).
+</div>
+
+    </div>
+  </body>
+</html>

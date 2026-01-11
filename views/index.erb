@@ -34,7 +34,6 @@
 <script>
 // Store and recall form data using localStorage
 document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('guestbook-form');
   const nameInput = document.getElementById('visitor_name');
   const emailInput = document.getElementById('email');
   
@@ -52,15 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   emailInput.addEventListener('input', function() {
     localStorage.setItem('guestbook_email', this.value);
-  });
-  
-  // Clear message after successful submission
-  form.addEventListener('submit', function() {
-    const messageInput = document.getElementById('message');
-    // Keep name and email but clear message field
-    if (messageInput) {
-      messageInput.value = '';
-    }
   });
 });
 </script>

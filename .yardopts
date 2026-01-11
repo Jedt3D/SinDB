@@ -1,0 +1,10 @@
+--markup markdown
+--title "SinaDB Documentation"
+--protected
+--output-dir doc/api
+lib/**/*.rb
+app.rb
+config/database.rb
+test/**/*.rb
+--exclude db/migrate.rb
+--exclude add_sample_records.rb

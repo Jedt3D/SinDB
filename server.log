@@ -1,0 +1,15 @@
+== Sinatra (v4.2.1) has taken the stage on 4567 for development with backup from Puma
+Puma starting in single mode...
+* Puma version: 7.1.0 ("Neon Witch")
+* Ruby version: ruby 3.2.8 (2025-03-26 revision 13f495dc2c) [arm64-darwin24]
+*  Min threads: 0
+*  Max threads: 5
+*  Environment: development
+*          PID: 11071
+* Listening on http://127.0.0.1:4567
+* Listening on http://[::1]:4567
+Use Ctrl-C to stop
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2026-01-12 05:21:29 +0700 ===
+- Goodbye!
+== Sinatra has ended his set (crowd applauds)
