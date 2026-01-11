@@ -47,11 +47,14 @@ class GuestbookManager
     Database.table_exists?('guestbook_entries')
   end
 
-  # Basic email format validation
+# Basic email format validation
   def self.valid_email?(email)
-    # Simple regex for email validation
-    # In production, you'd want a more robust validation
-    email.match?(/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i)
+    # More comprehensive regex for email validation
+    return false if email.nil? || email.strip.empty?
+    
+    # Enhanced email validation - matches standard email format
+    # Format: local-part@domain.tld (with subdomains allowed)
+    email.match?(/\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\z/i)
   end
   
   # Validate entry data before attempting to create
