@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= @title || 'Guestbook' %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Guestbook</h1>
+      <p>Leave a message in our digital guestbook</p>
+    </header>
+    
+    <main>
+      <%= yield %>
+    </main>
+    
+    <footer>
+      <p>Built with Sinatra 4, Ruby 3.2.8, and SQLite</p>
+      <p>© <%= Time.now.year %> Guestbook Application</p>
+    </footer>
+  </div>
+  
+  <% if @success %>
+  <div class="notification success">
+    <%= @success %>
+  </div>
+  <% end %>
+  
+  <% if @errors && !@errors.empty? %>
+  <div class="notification errors">
+    <% @errors.each do |error| %>
+      <p class="error"><%= error %></p>
+    <% end %>
+  </div>
+  <% end %>
+</body>
+</html>

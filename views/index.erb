@@ -1,0 +1,55 @@
+<h2>Sign Our Guestbook</h2>
+
+<div class="form-container">
+  <form action="/entries" method="post" class="guestbook-form">
+    <div class="form-row">
+      <label for="visitor_name">Name <span class="required">*</span></label>
+      <input type="text" id="visitor_name" name="visitor_name" required placeholder="Your name">
+    </div>
+    
+    <div class="form-row">
+      <label for="email">Email (optional)</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com">
+    </div>
+    
+    <div class="form-row">
+      <label for="message">Message <span class="required">*</span></label>
+      <textarea id="message" name="message" required placeholder="Write your message here..." rows="4"></textarea>
+    </div>
+    
+    <div class="form-row">
+      <button type="submit" class="submit-btn">Sign the Guestbook</button>
+    </div>
+  </form>
+</div>
+
+<hr class="divider">
+
+<h2>Guest Messages</h2>
+
+<% if @entries && @entries.empty? %>
+  <div class="empty-state">
+    <p>No entries yet. Be the first to leave a message!</p>
+  </div>
+<% else %>
+  <div class="entries-container">
+    <% @entries.each do |entry| %>
+      <article class="guestbook-entry">
+        <div class="entry-header">
+          <h3 class="visitor-name">
+            <%= h(entry['visitor_name']) %>
+            <% if entry['email'] && !entry['email'].empty? %>
+              <span class="email">(<%= h(entry['email']) %>)</span>
+            <% end %>
+          </h3>
+          <time class="entry-time" datetime="<%= entry['created_at'] %>">
+            <%= Time.parse(entry['created_at']).strftime('%B %d, %Y at %I:%M %p') %>
+          </time>
+        </div>
+        <div class="entry-content">
+          <%= h(entry['message']).gsub(/\n/, '<br>') %>
+        </div>
+      </article>
+    <% end %>
+  </div>
+<% end %>
