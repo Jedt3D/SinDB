@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.8.8)
+      public_suffix (>= 2.0.2, < 8.0)
     ast (2.4.3)
     base64 (0.3.0)
     ffi (1.17.3-aarch64-linux-gnu)
@@ -15,6 +17,8 @@ GEM
     ffi (1.17.3-x86_64-linux-musl)
     json (2.18.0)
     language_server-protocol (3.17.0.5)
+    launchy (2.5.2)
+      addressable (~> 2.8)
     lint_roller (1.1.0)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -28,6 +32,7 @@ GEM
       ast (~> 2.4.1)
       racc
     prism (1.7.0)
+    public_suffix (7.0.2)
     puma (6.6.1)
       nio4r (~> 2.0)
     racc (1.8.1)
@@ -98,6 +103,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  launchy (~> 2.5)
   puma (~> 6.0)
   rerun (~> 0.14)
   rubocop (~> 1.57)
